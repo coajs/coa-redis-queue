@@ -1,0 +1,29 @@
+{
+  "name": "coa-redis-queue",
+  "version": "1.0.2",
+  "description": "redis queue component for coa",
+  "keywords": [
+    "coajs",
+    "coa",
+    "queue"
+  ],
+  "license": "MIT",
+  "author": "Aex",
+  "homepage": "https://github.com/coajs/coa-redis-queue",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coajs/coa-redis-queue.git"
+  },
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "rm -rf dist && tsc && cp package.json dist",
+    "npm-publish": "yarn build && yarn version --patch && cp package.json README.md dist && cd dist && npm publish"
+  },
+  "dependencies": {
+    "coa-redis": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.5",
+    "typescript": "^3.9.3"
+  }
+}
